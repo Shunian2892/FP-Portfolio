@@ -1,5 +1,7 @@
-# Portfolio
-## Kim Veldhoen 2154630
+#Portfolio
+##Kim Veldhoen 
+##Studentnummer: 2154630
+##Jaar 1, klas B
 
 #Weeklijkse reflectie 
 ##Week 2:
