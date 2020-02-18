@@ -1,18 +1,18 @@
-#Portfolio
-##Kim Veldhoen 
-##Studentnummer: 2154630
-##Jaar 1, klas B
+# Portfolio
+## Kim Veldhoen 
+## Studentnummer: 2154630
+## Jaar 1, klas B
 
-#Weeklijkse reflectie 
-##Week 2:
+# Weeklijkse reflectie 
+## Week 2:
 In deze week heb ik een aantal veranderingen gemaakt aan de GUI klas. Dit in overleg met de rest van de project groep, omdat bepaalde aspecten die in week 1 in de GUI klas zijn geïmplementeerd niet aan onze eisen voldoen. 
-##Week3:
+## Week3:
 In deze week heb ik een aantal aanpassingen gedaan aan hoe de knoppen van de verschillende stages (new, edit, delete) shows baanmaken, bewerken, en opslaan.
 Dit in combinatie met gebruik van ObjectIO wat Florian heeft geïmplementeerd.
 
 
-#Vakinhoudelijke reflectie 
-##Week 2:
+# Vakinhoudelijke reflectie 
+## Week 2:
 In week 1 hebben we een opzet gemaakt voor de GUI van de agenda. Hier hadden we een tabel in verwerkt, maar dit bleek uiteindelijk niet te voldoen aan onze eisen omdat we hiermee geen gebruik konden maken van java2D.
 Hierdoor heb ik in week 2 de hele GUI klas omgebouwd waardoor deze wel gebruik kon maken van java2D.
 In de GUI klas hebben we ook gebruik gemaakt van de popup klas van Java zelf. Deze popups heb ik, na het ombouwen van de GUI klas, achterwegen gelaten omdat deze niet het effect gaven wat we eigenlijk hadden verwacht.
@@ -21,7 +21,7 @@ Wanneer er nu op een bepaalde knop wordt gedrukt (new, edit, delete), zal er een
 Hierin kan doormiddel van tekstvelden informatie worden ingevoerd die een (nieuwe) show zullen aanmeken.
 Deze show wordt voor nu opgeslagen in een ArrayList met shows die vanuit de datastore klas kan worden opgeslagen en opgevraagd.
 
-##Week 3:
+## Week 3:
 Deze week heb ik samen met Florian ervoor gezorgd dat de informatie van de tekstvelden worden opgeslagen door gebruik te maken van ObjectIO.
 Wanneer nu, tijdens het aanmaken van een nieuwe show, op de 'done' knop gedrukt is zal er eerst worden gekeken of er een artiestennaam is ingevuld in het artiesten tekstvak.
 Als dit niet het geval is, dan kan er niet op 'done' gedrukt worden. Dit om er voor te zorgen dat er geen shows worden opgeslagen zonder artiest.
