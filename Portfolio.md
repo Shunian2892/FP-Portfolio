@@ -3,16 +3,45 @@
 ## Studentnummer: 2154630
 ## Jaar 1, klas B
 
+# Inhoud:
+1. [`Wekelijkse reflectie`](#Wekelijkse reflectie)
+    1. [`Week 2`](##Week2)
+    2. [`Week 3`](##Week3)
+    3. [`Week 4`](##Week4)
+    4. [`Week 5`](##Week5)
+2. [`Vakinhoudelijke reflectie`](#Vakinhoudelijke reflectie)
+     1. [`Week 2`](##VRWeek2)
+     2. [`Week 3`](##VRWeek3)
+     3. [`Week 4`](##VRWeek4)
+3. [`JSON applicaties`](#JSONapplicaties)
+
+
 # Weeklijkse reflectie 
 ## Week 2:
-In deze week heb ik een aantal veranderingen gemaakt aan de GUI klas. Dit in overleg met de rest van de project groep, omdat bepaalde aspecten die in week 1 in de GUI klas zijn geïmplementeerd niet aan onze eisen voldoen. 
-## Week3:
-In deze week heb ik een aantal aanpassingen gedaan aan hoe de knoppen van de verschillende stages (new, edit, delete) shows baanmaken, bewerken, en opslaan.
-Dit in combinatie met gebruik van ObjectIO wat Florian heeft geïmplementeerd.
+In deze week zijn we gestart met de opzet van de agenda GUI. Voor het maken van het klassendiagram hebben we, in de eerste week, een opzet gemaakt van hou de GUI eruit zou moeten zien en welke functies deze nodig had.
+![Ontwerp agenda GUI](handleiding.png)
 
+Hierbij hebben we verschillende klassen opgezet waarin de agenda GUI zelf, de datastore, de shows, artiesten en podiums aangemaakt kunnen worden.
+![Klassendiagram FestivalPlanner](FestivalAgenda.jpg)
+
+Ieder persoon van de projectgroep kreeg een klasse aangewezen om deze week te maken. Remco en ik zijn beide begonnen aan de agenda GUI klasse zelf.
+In deze week heb ik een aantal veranderingen gemaakt aan de GUI klas. Dit in overleg met de rest van de project groep, omdat bepaalde aspecten die in week 1 in de GUI klas zijn geïmplementeerd niet aan onze eisen voldoen. 
+
+## Week 3:
+In deze week zijn we verder gaan werken aan de functionaliteiten van de agenda GUI.
+Ik heb in de GUI klas een aantal aanpassingen gedaan aan hoe de knoppen van de verschillende stages (new, edit, delete) shows aanmaken, bewerken, en opslaan.
+Dit in combinatie met gebruik van ObjectIO wat Florian heeft geïmplementeerd. Hiermee kunnen we nieuwe shows aanmaken en opslaan, shows ophalen en deze bewerken, shows individueel verwijderen, of alle shows tegelijk verwijderen.
+![GUI](agendaGUI.png)
+
+## Week 4:
+In deze week zijn we begonnen met het inladen van JSON-files in InteliJ. Hiermee kunnen we een aparte file maken wat als 
+Verder hebben we tijdens het senior gesprek met Johan besproken dat we de individuele portfolio's in de gir-repository van het project toevoegen. Hierdoor is de toegang tot onze portfolio's voor onze eigen senior, Joep, makkelijker.
+
+## Week 5:
+In deze week zijn we begonnen met het inladen van characters op de map met collisiondetection. 
 
 # Vakinhoudelijke reflectie 
-## Week 2:
+## VR Week 2:
 In week 1 hebben we een opzet gemaakt voor de GUI van de agenda. Hier hadden we een tabel in verwerkt, maar dit bleek uiteindelijk niet te voldoen aan onze eisen omdat we hiermee geen gebruik konden maken van java2D.
 Hierdoor heb ik in week 2 de hele GUI klas omgebouwd waardoor deze wel gebruik kon maken van java2D.
 In de GUI klas hebben we ook gebruik gemaakt van de popup klas van Java zelf. Deze popups heb ik, na het ombouwen van de GUI klas, achterwegen gelaten omdat deze niet het effect gaven wat we eigenlijk hadden verwacht.
@@ -21,8 +50,8 @@ Wanneer er nu op een bepaalde knop wordt gedrukt (new, edit, delete), zal er een
 Hierin kan doormiddel van tekstvelden informatie worden ingevoerd die een (nieuwe) show zullen aanmeken.
 Deze show wordt voor nu opgeslagen in een ArrayList met shows die vanuit de datastore klas kan worden opgeslagen en opgevraagd.
 
-## Week 3:
-Deze week heb ik samen met Florian ervoor gezorgd dat de informatie van de tekstvelden worden opgeslagen door gebruik te maken van ObjectIO.
+## VR Week 3:
+Deze week heb ik samen met Florian er voor gezorgd dat de informatie van de tekstvelden worden opgeslagen door gebruik te maken van ObjectIO.
 Wanneer nu, tijdens het aanmaken van een nieuwe show, op de 'done' knop gedrukt is zal er eerst worden gekeken of er een artiestennaam is ingevuld in het artiesten tekstvak.
 Als dit niet het geval is, dan kan er niet op 'done' gedrukt worden. Dit om er voor te zorgen dat er geen shows worden opgeslagen zonder artiest.
 Wanneer er wel een artiesten naam is ingevuld, maar de rest van de tekstvakken zijn leeg dan zullen deze een standaard waarde van '0' meekrijgen. Deze zijn bij het bewerken van de show, editStage, aan te passen.
@@ -64,7 +93,7 @@ Wanneer er wel een artiesten naam is ingevuld, maar de rest van de tekstvakken z
             }
     });
 
-Bij het verwijderen van een show zal er eerst worden gevraagd of de gebruiker zeker weet of hij/zij deze show wilt verwijderen. Nadat er op 'yes' is gedrukt, zal de desbetreffende show uit de lijst worden gehaald.
+Bij het verwijderen van een show zal eerst worden gevraagd of de gebruiker zeker weet of hij/zij deze show wilt verwijderen. Nadat op 'yes' is gedrukt, zal de desbetreffende show uit de lijst worden gehaald.
      
     yesButton.setOnAction(e -> {
         if (!deserializer.Read().isEmpty()){
@@ -74,4 +103,8 @@ Bij het verwijderen van een show zal er eerst worden gevraagd of de gebruiker ze
         serializer.Write(showList);
         delStage.close();
     }); 
-   
+    
+## VR Week 4:
+Deze week heb ik mij verdiept in het inladen en uitlezen van JSON-files in Java en IntelliJ.
+
+# JSON applicaties
