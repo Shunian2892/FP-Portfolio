@@ -4,19 +4,20 @@
 ## Jaar 1, klas B
 
 # Inhoud:
-1. [`Wekelijkse reflectie`](#wekelijksereflectie)
-    1. [`Week 2`](##Week 2)
-    2. [`Week 3`](##Week 3)
-    3. [`Week 4`](##Week 4)
-    4. [`Week 5`](##Week 5)
-2. [`Vakinhoudelijke reflectie`](#Vakinhoudelijke reflectie)
-     1. [`Week 2`](##VR Week 2)
-     2. [`Week 3`](##VR Week 3)
-     3. [`Week 4`](##VR Week 4)
-3. [`JSON applicaties`](#JSONapplicaties)
+1. [`Wekelijkse reflectie`](#wekelijkse-reflectie)
+    1. [`Week 2`](##Week-2:)
+    2. [`Week 3`](##Week-3:)
+    3. [`Week 4`](##Week-4:)
+    4. [`Week 5`](##Week-5:)
+2. [`Vakinhoudelijke reflectie`](#vakinhoudelijke-reflectie)
+     1. [`Week 2`](##VR-Week-2:)
+     2. [`Week 3`](##vr-week-3:)
+     3. [`Week 4`](##vr-week-4:)
+     4. [`Week 5`](##vr-week-5:)
+3. [`JSON applicaties`](#json-applicaties)
 
 
-# Weeklijkse reflectie 
+# Wekelijkse reflectie 
 ## Week 2:
 In deze week zijn we gestart met de opzet van de agenda GUI. Voor het maken van het klassendiagram hebben we, in de eerste week, een opzet gemaakt van hou de GUI eruit zou moeten zien en welke functies deze nodig had.
 ![Ontwerp agenda GUI](handleiding.png)
@@ -34,11 +35,13 @@ Dit in combinatie met gebruik van ObjectIO wat Florian heeft geïmplementeerd. H
 ![GUI](agendaGUI.png)
 
 ## Week 4:
-In deze week zijn we begonnen met het inladen van JSON-files in InteliJ. Hiermee kunnen we een aparte file maken wat als 
+In deze week zijn we begonnen met het inladen van JSON-files in InteliJ. Hiermee kunnen we een aparte file maken wat als "map" achtergrond gebruikt kan worden.
+Hierop plaatsen we de vier verschillende podiums, toiletten, eettentjes en rustplaatsen waar de karakters op kunnen rondlopen.
 Verder hebben we tijdens het senior gesprek met Johan besproken dat we de individuele portfolio's in de gir-repository van het project toevoegen. Hierdoor is de toegang tot onze portfolio's voor onze eigen senior, Joep, makkelijker.
 
 ## Week 5:
-In deze week zijn we begonnen met het inladen van characters op de map met collisiondetection. 
+In deze week zijn we begonnen met het inladen van karakters op de map met collisiondetection. In week 6 kunnen we met A-STAR pathfinding ervoor zorgen dat deze karakters tussen de verschillende podiums, toiletten en eettentjes kunnen lopen.
+Zo kan het gedrag van gasten op een festival gesimuleerd worden en kunnen de knelpunten van het festival terrein in kaart worden gebracht.
 
 # Vakinhoudelijke reflectie 
 ## VR Week 2:
@@ -106,5 +109,7 @@ Bij het verwijderen van een show zal eerst worden gevraagd of de gebruiker zeker
     
 ## VR Week 4:
 Deze week heb ik mij verdiept in het inladen en uitlezen van JSON-files in Java en IntelliJ.
+
+## VR Week 5:
 
 # JSON applicaties
