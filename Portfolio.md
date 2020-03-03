@@ -4,15 +4,15 @@
 ## Jaar 1, klas B
 
 # Inhoud:
-1. [`Wekelijkse reflectie`](#Wekelijkse reflectie)
-    1. [`Week 2`](##Week2)
-    2. [`Week 3`](##Week3)
-    3. [`Week 4`](##Week4)
-    4. [`Week 5`](##Week5)
+1. [`Wekelijkse reflectie`](#wekelijksereflectie)
+    1. [`Week 2`](##Week 2)
+    2. [`Week 3`](##Week 3)
+    3. [`Week 4`](##Week 4)
+    4. [`Week 5`](##Week 5)
 2. [`Vakinhoudelijke reflectie`](#Vakinhoudelijke reflectie)
-     1. [`Week 2`](##VRWeek2)
-     2. [`Week 3`](##VRWeek3)
-     3. [`Week 4`](##VRWeek4)
+     1. [`Week 2`](##VR Week 2)
+     2. [`Week 3`](##VR Week 3)
+     3. [`Week 4`](##VR Week 4)
 3. [`JSON applicaties`](#JSONapplicaties)
 
 
