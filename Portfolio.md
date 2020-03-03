@@ -10,10 +10,10 @@
     3. [`Week 4`](#week-4:)
     4. [`Week 5`](#week-5:)
 2. [`Vakinhoudelijke reflectie`](#vakinhoudelijke-reflectie)
-     1. [`Week 2`](##vr-week-2:)
-     2. [`Week 3`](#vr-week-3:)
-     3. [`Week 4`](#vr-week-4:)
-     4. [`Week 5`](#vr-week-5:)
+     1. [`Week 2`](#VR-week-2:)
+     2. [`Week 3`](#VR-week-3:)
+     3. [`Week 4`](#VR-week-4:)
+     4. [`Week 5`](#VR-week-5:)
 3. [`JSON applicaties`](#json-applicaties)
 
 
@@ -119,3 +119,17 @@ Deze week heb ik mij verdiept in het inladen en uitlezen van JSON-files in Java 
 
 
 # JSON applicaties
+JSON staat voor JavaScript Object Notation en is een gemakkelijke en lichtgewicht data-uitwisselings format.
+JSON maakt alleen gebruik van tekst, waardoor dit gemakkelijk van en naar een server verzonden kan worden.
+## Websites
+### HTML
+Json kan heel gemakkelijk worden omgezet in JavaScript wat omgezet kan worden in HTML voor websites
+
+### PHP
+PHP objecten kunnen geconverteerd worden in JSON waarmee bijvoorbeeld een website gemaakt kan worden
+
+## Web servers
+
+## Smartwatch apps
+
+Al deze applicaties maken gebruik van JavaScript
