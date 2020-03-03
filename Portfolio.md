@@ -10,10 +10,6 @@
     3. [`Week 4`](#week-4:)
     4. [`Week 5`](#week-5:)
 2. [`Vakinhoudelijke reflectie`](#vakinhoudelijke-reflectie)
-     1. [`Week 2`](#VR-week-2:)
-     2. [`Week 3`](#VR-week-3:)
-     3. [`Week 4`](#VR-week-4:)
-     4. [`Week 5`](#VR-week-5:)
 3. [`JSON applicaties`](#json-applicaties)
 
 
