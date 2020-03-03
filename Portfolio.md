@@ -5,15 +5,15 @@
 
 # Inhoud:
 1. [`Wekelijkse reflectie`](#wekelijkse-reflectie)
-    1. [`Week 2`](##Week-2:)
-    2. [`Week 3`](##Week-3:)
-    3. [`Week 4`](##Week-4:)
-    4. [`Week 5`](##Week-5:)
+    1. [`Week 2`](#week-2:)
+    2. [`Week 3`](#week-3:)
+    3. [`Week 4`](#week-4:)
+    4. [`Week 5`](#week-5:)
 2. [`Vakinhoudelijke reflectie`](#vakinhoudelijke-reflectie)
-     1. [`Week 2`](##VR-Week-2:)
-     2. [`Week 3`](##vr-week-3:)
-     3. [`Week 4`](##vr-week-4:)
-     4. [`Week 5`](##vr-week-5:)
+     1. [`Week 2`](##vr-week-2:)
+     2. [`Week 3`](#vr-week-3:)
+     3. [`Week 4`](#vr-week-4:)
+     4. [`Week 5`](#vr-week-5:)
 3. [`JSON applicaties`](#json-applicaties)
 
 
@@ -37,10 +37,14 @@ Dit in combinatie met gebruik van ObjectIO wat Florian heeft geïmplementeerd. H
 ## Week 4:
 In deze week zijn we begonnen met het inladen van JSON-files in InteliJ. Hiermee kunnen we een aparte file maken wat als "map" achtergrond gebruikt kan worden.
 Hierop plaatsen we de vier verschillende podiums, toiletten, eettentjes en rustplaatsen waar de karakters op kunnen rondlopen.
-Verder hebben we tijdens het senior gesprek met Johan besproken dat we de individuele portfolio's in de gir-repository van het project toevoegen. Hierdoor is de toegang tot onze portfolio's voor onze eigen senior, Joep, makkelijker.
+Verder hebben we tijdens het senior gesprek met Johan besproken dat we de individuele portfolio's in de git-repository van het project toevoegen. Hierdoor is de toegang tot onze portfolio's voor onze eigen senior, Joep, makkelijker.
 
 ## Week 5:
-In deze week zijn we begonnen met het inladen van karakters op de map met collisiondetection. In week 6 kunnen we met A-STAR pathfinding ervoor zorgen dat deze karakters tussen de verschillende podiums, toiletten en eettentjes kunnen lopen.
+In deze week zijn we begonnen met de opzet van de festival simulatormodule. Hiervoor hebben we een globaal overzicht gemaakt van welke klassen er nodig zullen zijn.
+Op basis van de globale opzet kunnen we een klassendiagram maken van welke klassen er nodig zijn voor de simulator zelf.
+![Globale opzet](simulatiemodule.png)
+Wanneer de klasse voor NPC en gasten af is, kunnen de karakters op de map worden ingeladen. In eerste instantie testen we of deze karakters over de map heen kunnen lopen en of de collisiondetection goed werkt.
+In week 6 kunnen we met A-STAR pathfinding ervoor zorgen dat deze karakters tussen de verschillende podiums, toiletten en eettentjes kunnen lopen.
 Zo kan het gedrag van gasten op een festival gesimuleerd worden en kunnen de knelpunten van het festival terrein in kaart worden gebracht.
 
 # Vakinhoudelijke reflectie 
@@ -111,5 +115,7 @@ Bij het verwijderen van een show zal eerst worden gevraagd of de gebruiker zeker
 Deze week heb ik mij verdiept in het inladen en uitlezen van JSON-files in Java en IntelliJ.
 
 ## VR Week 5:
+
+
 
 # JSON applicaties
