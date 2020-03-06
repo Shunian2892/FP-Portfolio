@@ -5,10 +5,6 @@
 
 # Inhoud:
 1. [`Wekelijkse reflectie`](#wekelijkse-reflectie)
-    1. [`Week 2`](#week-2:)
-    2. [`Week 3`](#week-3:)
-    3. [`Week 4`](#week-4:)
-    4. [`Week 5`](#week-5:)
 2. [`Vakinhoudelijke reflectie`](#vakinhoudelijke-reflectie)
 3. [`JSON applicaties`](#json-applicaties)
 
