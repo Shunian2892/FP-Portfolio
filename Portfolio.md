@@ -36,8 +36,16 @@ In deze week zijn we begonnen met de opzet van de festival simulatormodule. Hier
 Op basis van de globale opzet kunnen we een klassendiagram maken van welke klassen er nodig zijn voor de simulator zelf.
 ![Globale opzet](simulatiemodule.png)
 Wanneer de klasse voor NPC en gasten af is, kunnen de karakters op de map worden ingeladen. In eerste instantie testen we of deze karakters over de map heen kunnen lopen en of de collisiondetection goed werkt.
-In week 6 kunnen we met A-STAR pathfinding ervoor zorgen dat deze karakters tussen de verschillende podiums, toiletten en eettentjes kunnen lopen.
+In week 6 kunnen we met A* pathfinding ervoor zorgen dat deze karakters tussen de verschillende podiums, toiletten en eettentjes kunnen lopen.
 Zo kan het gedrag van gasten op een festival gesimuleerd worden en kunnen de knelpunten van het festival terrein in kaart worden gebracht.
+
+## Week 6:
+//TODO uitbreiden
+In deze week zijn we begonnen met het implementeren van het pathfinding algortitme. Na het opstart college hebben we besloten om Breath First Search (BFS) toe te passen in plaats van A^. Dit omdat uit het opstart college naar voren kwam dat A* lastiger wordt voor een simulatie met veel NPC's.
+
+## Week 7:
+//TODO uitbreiden
+In deze week zijn Dogukan en ik verder gegaan met het implementeren van BFS. Dit kwam omdat wij vorige week compleet vast liepen op bepaalde punten.
 
 # Vakinhoudelijke reflectie 
 ## VR Week 2:
@@ -104,10 +112,110 @@ Bij het verwijderen van een show zal eerst worden gevraagd of de gebruiker zeker
     }); 
     
 ## VR Week 4:
-Deze week heb ik mij verdiept in het inladen en uitlezen van JSON-files in Java en IntelliJ.
+//TODO uitbreiden
+Deze week heb ik mij verdiept in het inladen en uitlezen van JSON-files in Java en IntelliJ. 
 
 ## VR Week 5:
+//TODO uitbreiden
+Deze week heb ik mij verdiept in A* pathfinding. Wij waren van plan A* te gebruiken omdat merendeel van de project groep hier al van had gehoord. Bij het onderzoek doen naar A* heb ik in pseudocode een paar klassen gemaakt met attributen waarvan ik dacht deze nodig te hebben.
 
+
+## VR Week 6:
+Deze week hebben mijn projectgroep en ik er voor gekozen om, in plaats van het A* pathfinding te gebruiken, het Dijkstra-pathfinding te implementeren. Dit omdat dit algoritme tijdens het opstart college kort is uitgelegd en omdat Johan zei dat het Breath Frist Search (BFS) makkelijker toe te passen is op een simulatie met veel NPC's (zoals in ons geval).
+Samen met de projectgroep hebben we op de map een collisionLayer aangemaakt waarin de grenzen van de map zijn aangegeven.
+![CollisionMap](tileMap.png)
+In de afbeelding staan alle rood getekende vierkanten voor een collisionTile. Dit betekend dat de NPC's niet op deze tile kunnen lopen. Als eerste hebben Dogukan en ik ons verdiept in het BFS algortime.
+Vervolgens hebben we met hulp van Timo en Nathalie de collisionLayer uit de JSON file kunnen halen en hebben wij de data hiervan kunnen opslaan in een 2D Array met de hoogte en breedte van de map zelf.
+ 
+    for (int y = 0; y < height; y++){
+        for (int x = 0; x < width; x++) {
+            int gid = map[y][x];
+            this.tileMap[y][x] = new Tile(new Point2D.Double(x,y), false, false, false);
+                                     
+            if (gid == 0) {
+                graphics.setColor(Color.GREEN);
+                graphics.draw(new Rectangle2D.Double(x * tileWidth, y * tileHeight, 32, 32));
+                Font font = new Font("Arial", Font.PLAIN, 5);
+                graphics.setFont(font);
+                graphics.drawString("(" + (int) gridPos.getX()/32 + " , " + (int) gridPos.getY()/32 + ")", (x * tileWidth), (y * tileHeight));                        
+            } else if (gid == 975) {
+                graphics.setColor(Color.RED);
+                graphics.fill(new Rectangle2D.Double(x * tileWidth, y * tileHeight, 32, 32));
+                this.tileMap[y][x].setWall(true);
+                                    
+            }
+        }
+    }
+In bovenstaande code hebben we een geneste for-loop. Hiermee wordt er door elke rij en kolom heen gegaan en wordt gecheckt of de gid op die plaats 0 of 975 is (met 975 als collisonTile).
+Als de gid overeen komt met 975, dan zetten we de voor die tile de boolean setWall op true. Voor visuele validatie, wat betreft het corrcet uitlezen van de map, hebben wij voor de zekerheid deze tiles met een rood blokje aangegeven.
+Nadat we deze grid hadden gemaakt, kwamen we compleet vast te zitten. Hierom hebben wij hulp gevraagd bij medestudenten, wij hebben deze week dezelfde vragen aan Joep (onze senior) gevraagd, maar hierop kregen wij geen antwoord.
+
+
+## VR Week 7:
+In deze week zijn Dogukan en ik verder gegaan met het uitzoeken van de BFS. We hebben ieder voor zich geprobeerd het BFS algortime te implementeren om deze vervolgens samen na te gaan om zo tot één geheel te komen.
+Ik heb mij voornamelijk bezig gehouden met het uitprinten van een adjacency map van de tileMap. Voor het implementeren van het BFS algoritme heb ik de klasse Tile aangemaakt,
+In de Tile klas wordt een int x en int y meegegeven als start punt. Verder heeft deze klassen getters en setters voor de x, y en de boolean isWall.
+Met het aanmaken van een nieuwe Tile heb ik geprobeerd om de vier omliggende cellen (links, rechts, boven, onder) te kunnen detecteren. Door de twee geneste for-loops kon ik een x en y waarde opvragen, om vervolgens hiermee met vier if-statements om de desbetreffende cel heen te kijken.
+    
+    Tile start  = new Tile(int x, int y);
+    Queue<Tile> open = new LinkedList<Tile>();
+    ArrayList<Tile> closed = new ArrayList<Tile>();
+    Tile current = start;
+    open.add(start);
+    
+    while(!open.isEmpty()){
+        closed.add(open.poll());
+        //Check de omliggende tiles
+        if (i > 0 && array[i-1][j] == 0 && !closed.contains(new Tile(i-1, j))) //Voor cel boven
+            open.add(new Tile(j, i-1);
+        if (j > 0 && array[i][j-1] == 0 && !closed.contains(new Tile(j-1, i))) //Voor cel links
+            open.add(new Tile(j-1, i);
+        if (j + 1 < array[1].length && array[i][j+1] == 0 && !closed.contains(new Tile() //Voor cel rechts
+            open.add(new Tile(j+1, i);
+        if (i + 1 < array.length && array[i+1][j] == 0) //Voor cel onder
+            open.add(new Tile(j, i+1)
+    }
+    
+Hierbij heb ik geprobeerd om als eerste te kijken of de cel links/rechts/boven/onder uberhaüpt in de grid zit of niet. Wanneer dit niet het geval was wordt er een nieuwe tile van die positie aangemaakt ne in de Queue open gezet.
+Dit bleek niet geweldig te werken. Vervolgens hebben Dogukan en ik onze codes samen doorgekeken en hebben we een paar aanpassingen gedaan aan de Tile klasse en het doorlopen van de 2D Array. Helaas zijn we er niet zelf uitgekomen, ook niet met het senior gesprek met Joep.
+Daarom hebben we weer de hulp van onze medestudent gevraagd. Op basis van zijn uitleg zijn hebben Dogukan en ik aanpassingen gedaan in de klassen: Tile, Map, BreathFirstSearch en de main.
+De Tile klasse vraagt nu om een Point2D, boolean isWall, boolean isDestination, boolean isVisited.
+De BreathFirstSearch klasse bevat het BFS algoritme en het checken van de omliggende cellen, in plaats van in de main. Het zetten van een tileMap op basis van de 2D Array die we aanmaken in de map klasse.
+    
+    if(inGrid(pos.getX(), pos.getY())){
+        this.queue = new LinkedList<Tile>();
+        grid[(int)pos.getY()][(int)pos.getX()].setDestination(true);
+        grid[(int)pos.getY()][(int)pos.getX()].addRoute("route 1", new Point2D.Double(0,0));
+        grid[(int)pos.getY()][(int)pos.getX()].setVisited(true);
+    }
+      
+De code om de buren te controleren is nu veranderd in:
+        
+    //Dit dan voor elke richting dan voor alleen de cel onder
+    if(inGrid(pos.getX(), pos.getY() + 1)){
+        final Tile checkTile = this.grid[(int)pos.getY() + 1][(int)pos.getX()];
+        if(!checkTile.isWall() && !checkTile.isVisited() && !checkTile.isDestination()){
+            checkTile.addRoute(route, new Point2D.Double(0,-1));
+            checkTile.setVisited(true);
+            queue.add(checkTile);
+        }
+    }
+
+Met een HashMap kunnen we karakters meegeven aan verschillende routes (voor verschillende targets):
+
+    //Dit dan voor elke richting
+    if (bfs.getTileMap()[y][x].isWall()) {
+        System.out.print("W ");
+    } else if (bfs.getTileMap()[y][x].getRoute().get("route 1") == null) {
+        System.out.print("o ");
+    } else if (bfs.getTileMap()[y][x].getRoute().get("route 1").getX() == 1) {
+        System.out.print("> ");
+    } else if (bfs.getTileMap()[y][x].getRoute().get("route 1").getX() == -1) {
+        System.out.print("< ");
+    
+Zodat we uiteindelijk als resultaat krijgen:
+![PathFinding](pathfindingMap.png)
+Met "o" wanneer de Tile onbereikbaar is, "W" wanneer de Tile de boolean isWall = true bevat, en pijltjes voor de richting wanneer de Tile naar een andere Tile moet lopen
 
 
 # JSON applicaties
