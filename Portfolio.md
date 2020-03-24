@@ -47,6 +47,10 @@ In deze week zijn we begonnen met het implementeren van het pathfinding algortit
 //TODO uitbreiden
 In deze week zijn Dogukan en ik verder gegaan met het implementeren van BFS. Dit kwam omdat wij vorige week compleet vast liepen op bepaalde punten.
 
+## Week 8:
+In deze week hebben wij de verschillende feature branches van het project bij elkaar gevoegd. We hebben alle packages en klassen moeten refactoren zodat deze verschillende features met elkaar samenwerken.
+Verder hebben we het voor elkaar gekregen dat er NPC's op de map gespawn kunnen worden. Deze NPC's kunnen vervolgens zelfstandig naar een aangegeven target toe lopen. 
+Zodra de NPC's bij het target zijn aangekomen, kunnen deze in het aangegeven targetArea vrij rondlopen. Tevens zullen de NPC's meeschalen wanneer de map in en uitgezoomed wordt.
 # Vakinhoudelijke reflectie 
 ## VR Week 2:
 In week 1 hebben we een opzet gemaakt voor de GUI van de agenda. Hier hadden we een tabel in verwerkt, maar dit bleek uiteindelijk niet te voldoen aan onze eisen omdat we hiermee geen gebruik konden maken van java2D.
@@ -117,6 +121,11 @@ Deze week heb ik mij verdiept in het inladen en uitlezen van JSON-files in Java 
 
 ## VR Week 5:
 //TODO uitbreiden
+Deze week zijn we begonnen met de simulatie module van het festival. We hebben een globale opzet gemaakt van de klassen die we denken nodig te hebben:
+Main - om de simulatie te starten
+Map - voor het inladen van de JSON file en het laten zien van de map
+NPC - is een superklasse waar de klassen Artist en Visitor van erven.
+Artist en Visitor - werken hetzelfde, alleen krijgen ze een andere sprite
 Deze week heb ik mij verdiept in A* pathfinding. Wij waren van plan A* te gebruiken omdat merendeel van de project groep hier al van had gehoord. Bij het onderzoek doen naar A* heb ik in pseudocode een paar klassen gemaakt met attributen waarvan ik dacht deze nodig te hebben.
 
 
