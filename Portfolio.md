@@ -6,7 +6,8 @@
 # Inhoud:
 1. [`Wekelijkse reflectie`](#wekelijkse-reflectie)
 2. [`Vakinhoudelijke reflectie`](#vakinhoudelijke-reflectie)
-3. [`JSON applicaties`](#json-applicaties)
+3. [`Mijn Reflectie`](#mijn-reflectie)
+4. [`JSON applicaties`](#json-applicaties)
 
 
 # Wekelijkse reflectie 
@@ -14,7 +15,7 @@
 In deze week zijn we gestart met de opzet van de agenda GUI. Voor het maken van het klassendiagram hebben we, in de eerste week, een opzet gemaakt van hou de GUI eruit zou moeten zien en welke functies deze nodig had.
 ![Ontwerp agenda GUI](handleiding.png)
 
-Hierbij hebben we verschillende klassen opgezet waarin de agenda GUI zelf, de datastore, de shows, artiesten en podiums aangemaakt kunnen worden.
+Hierbij hebben we verschillende klassen opgezet waarin de agenda GUI zelf, de datastore, de shows, artists en podiums aangemaakt kunnen worden.
 ![Klassendiagram FestivalPlanner](FestivalAgenda.jpg)
 
 Ieder persoon van de projectgroep kreeg een klasse aangewezen om deze week te maken. Remco en ik zijn beide begonnen aan de agenda GUI klasse zelf.
@@ -40,12 +41,25 @@ In week 6 kunnen we met A* pathfinding ervoor zorgen dat deze karakters tussen d
 Zo kan het gedrag van gasten op een festival gesimuleerd worden en kunnen de knelpunten van het festival terrein in kaart worden gebracht.
 
 ## Week 6:
-//TODO uitbreiden
 In deze week zijn we begonnen met het implementeren van het pathfinding algortitme. Na het opstart college hebben we besloten om Breath First Search (BFS) toe te passen in plaats van A^. Dit omdat uit het opstart college naar voren kwam dat A* lastiger wordt voor een simulatie met veel NPC's.
+We hebben als eerst ervoor gezorgd dat we de collision laag van de JSON file konden uitlezen en al deze data in een grid konden zetten. Nadat alle juiste data in een grid vorm met de afmetingen van de map was gezegt, konden we beginnen met het implementeren van de BFS op deze grid.
+In deze week hebben Dogukan en ik alleen de collision laag kunnen omzeten in een grid en hierop de collisie blokken kunnen tekenen. Met het BFS zijn wij helaas niet verder gekomen.
 
 ## Week 7:
-//TODO uitbreiden
-In deze week zijn Dogukan en ik verder gegaan met het implementeren van BFS. Dit kwam omdat wij vorige week compleet vast liepen op bepaalde punten.
+In deze week zijn Dogukan en ik verder gegaan met het implementeren van BFS. We liepen vorige week uit omdat we vast zaten met het coderen van de BFS. We hebben na veel onderzoek de omliggende cellen van 1 gridpositie kunnen checken of het een muur of geen muur is.
+Na hulp van een mede-student zijn we uiteindelijk verder gekomen en hebben we een extra Tile en BreadthFirstSearch klasse toegevoegd. In de Tile klasse staat alle informatie wat betreft de tile dat het algoritme aan het odnerzoeken is, en in de BFS klasse staat alles wat te maken heeft met het pathfinding algoritme.
+Vervolgens is in de MapMain klasse verschillende routes toegevoegd die corresponderen met de podia voor de artists en de view area's van de visitors. Door de opgeslagen shows uit te lezen van de datastore, kan worden gekeken naar de naam van de artist en naar welk podium deze moet gaan op welke tijd.
+Afhankelijk van de begin tijd van een show, kan voor de visitors worden gekeken naar het podium dat is opgeslagen, en kan via de voorafingestelde route naar de juiste viewa rea gelopen worden.
+
+## Week 8:
+In deze week hebben wij de verschillende feature branches van het project bij elkaar gevoegd. We hebben alle packages en klassen moeten refactoren zodat deze verschillende features met elkaar samenwerken.
+Verder hebben we het voor elkaar gekregen dat er NPC's op de map gespawn kunnen worden. Deze NPC's kunnen vervolgens zelfstandig naar een aangegeven target toe lopen. 
+Zodra de NPC's bij het target zijn aangekomen, kunnen deze in het aangegeven targetArea vrij rondlopen. Tevens zullen de NPC's meeschalen wanneer de map in en uitgezoomed wordt.
+
+## Week 9:
+In deze week hebben wij alles laatste puntjes op de i gezet. De visitors kunnen na deze week naar verschillende podia toe lopen op basis van populariteit van de artist die daar optreedt. De pathfinding werkt voor de visitors en de artists. Er is een tijdsbalk toegevoegd waarmee je terug kan kijken naar een moment eerder oo de gesimuleerde dag.
+Verder hebben wij een presentatie gemaakt en ons voorbereid op het assessment
+
 
 # Vakinhoudelijke reflectie 
 ## VR Week 2:
@@ -59,9 +73,9 @@ Deze show wordt voor nu opgeslagen in een ArrayList met shows die vanuit de data
 
 ## VR Week 3:
 Deze week heb ik samen met Florian er voor gezorgd dat de informatie van de tekstvelden worden opgeslagen door gebruik te maken van ObjectIO.
-Wanneer nu, tijdens het aanmaken van een nieuwe show, op de 'done' knop gedrukt is zal er eerst worden gekeken of er een artiestennaam is ingevuld in het artiesten tekstvak.
-Als dit niet het geval is, dan kan er niet op 'done' gedrukt worden. Dit om er voor te zorgen dat er geen shows worden opgeslagen zonder artiest.
-Wanneer er wel een artiesten naam is ingevuld, maar de rest van de tekstvakken zijn leeg dan zullen deze een standaard waarde van '0' meekrijgen. Deze zijn bij het bewerken van de show, editStage, aan te passen.
+Wanneer nu, tijdens het aanmaken van een nieuwe show, op de 'done' knop gedrukt is zal er eerst worden gekeken of er een artist name is ingevuld in het artists tekstvak.
+Als dit niet het geval is, dan kan er niet op 'done' gedrukt worden. Dit om er voor te zorgen dat er geen shows worden opgeslagen zonder artist.
+Wanneer er wel een artist naam is ingevuld, maar de rest van de tekstvakken zijn leeg dan zullen deze een standaard waarde van '0' meekrijgen. Deze zijn bij het bewerken van de show, editStage, aan te passen.
 
     doneButton.setOnAction(e -> {
         if(!artistField.getText().isEmpty()){
@@ -112,13 +126,29 @@ Bij het verwijderen van een show zal eerst worden gevraagd of de gebruiker zeker
     }); 
     
 ## VR Week 4:
-//TODO uitbreiden
-Deze week heb ik mij verdiept in het inladen en uitlezen van JSON-files in Java en IntelliJ. 
+Deze week heb ik mij verdiept in het inladen en uitlezen van JSON-files in Java en IntelliJ. Het maken van de achtergrond/map hebben wij gedaan met behulp van Tiled. Wanneer we de map exporteren wordt deze omgezetn in een JSON file.
+In Java kan je met een JsonObject dit soort files uitlezen:
+
+        JsonObject root;
+        
+        JsonReader reader = null;
+        reader = Json.createReader(getClass().getResourceAsStream(filenName));
+        this.root = reader.readObject();
+        
+        this.width = this.root.getInt("width");
+        this.height = this.root.getInt("height"); 
+     
+Met dze "root" kunnen verschillende attributen uit de JSON file worden opgeroepen. Bij het uitlezen van de verschillende layers die wij hebben gebruikt worden deze layers in een ArrayList gezet.
+Wanneer door de ArrayList met layers wordt gegaan, wordt eerst gekeken of de visibility van de layer aan staat. Zo ja, dan wordt door de gehele lengte en hoogte van de map per coordinaat gekeken naar de RGB waarde van dat coordinaat.
+
 
 ## VR Week 5:
-//TODO uitbreiden
+Deze week zijn we begonnen met de simulatie module van het festival. We hebben een globale opzet gemaakt van de klassen die we denken nodig te hebben:
+Main - om de simulatie te starten
+Map - voor het inladen van de JSON file en het laten zien van de map
+NPC - is een superklasse waar de klassen Artist en Visitor van erven.
+Artist en Visitor - werken hetzelfde, alleen krijgen ze een andere sprite
 Deze week heb ik mij verdiept in A* pathfinding. Wij waren van plan A* te gebruiken omdat merendeel van de project groep hier al van had gehoord. Bij het onderzoek doen naar A* heb ik in pseudocode een paar klassen gemaakt met attributen waarvan ik dacht deze nodig te hebben.
-
 
 ## VR Week 6:
 Deze week hebben mijn projectgroep en ik er voor gekozen om, in plaats van het A* pathfinding te gebruiken, het Dijkstra-pathfinding te implementeren. Dit omdat dit algoritme tijdens het opstart college kort is uitgelegd en omdat Johan zei dat het Breath Frist Search (BFS) makkelijker toe te passen is op een simulatie met veel NPC's (zoals in ons geval).
@@ -215,7 +245,19 @@ Met een HashMap kunnen we karakters meegeven aan verschillende routes (voor vers
     
 Zodat we uiteindelijk als resultaat krijgen:
 ![PathFinding](pathfindingMap.png)
+
 Met "o" wanneer de Tile onbereikbaar is, "W" wanneer de Tile de boolean isWall = true bevat, en pijltjes voor de richting wanneer de Tile naar een andere Tile moet lopen
+
+## VR Week 8:
+In deze week hebben mijn projectgroep en ik de verschillende branches en features bij elkaar toegevoegd en ervoor gezorgd dat deze goed met elkaar communiceren en werken. Zo kan er nu vanuit de datastore de show lijst worden opgevraagd waarmee de BFS een route kan genereren op basis van de informatie van de verschillende shows.
+We hebben ook gekozen voor nieuwe sprites met een afmeting van 32x32, omdat de vorige sprites 2x zo groot waren en niet netjes meeschaalde wanneer er in en uit werdt gezoomd op de map.
+We hebben er voor gekozen dat, wanneer een artist of een visitor bij een bepaald punt op het podium of de view area komt, de artist en visitor dan naar random gegenereerde plekken op de aangegeven area zal rondlopen. In de JSON file is deze area aangegeven als TargetArea met een bepaalde hoogte en breedte. De artists en visitors zullen dus binnen deze afmetingen "rondlopen".
+
+## VR Week 9:
+In deze week hebben mijn project groep en ik voornamelijk de punjtes op de i gezet. Hierbij hebben we er voor kunnen zorgen dat de visitors ,op basis van de populariteit van de artist, zich verdelen over de verschillende podia.
+Tevens is er een tijdbalk toegevoegd waarmee de gebruiker eerder gesimuleerde momenten van de dag kan terugzien. Verder hebben wij ons voobereid op het assessment voor de komende week.
+
+# Mijn reflectie
 
 
 # JSON applicaties
