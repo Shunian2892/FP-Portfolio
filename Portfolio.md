@@ -41,7 +41,7 @@ In week 6 kunnen we met A* pathfinding ervoor zorgen dat deze karakters tussen d
 Zo kan het gedrag van gasten op een festival gesimuleerd worden en kunnen de knelpunten van het festival terrein in kaart worden gebracht.
 
 ## Week 6:
-In deze week zijn we begonnen met het implementeren van het pathfinding algortitme. Na het opstart college hebben we besloten om Breath First Search (BFS) toe te passen in plaats van A^. Dit omdat uit het opstart college naar voren kwam dat A* lastiger wordt voor een simulatie met veel NPC's.
+In deze week zijn we begonnen met het implementeren van het pathfinding algortitme. Na het opstart college hebben we besloten om Breath First Search (BFS) toe te passen in plaats van A*. Dit omdat uit het opstart college naar voren kwam dat A* lastiger wordt voor een simulatie met veel NPC's.
 We hebben als eerst ervoor gezorgd dat we de collision laag van de JSON file konden uitlezen en al deze data in een grid konden zetten. Nadat alle juiste data in een grid vorm met de afmetingen van de map was gezegt, konden we beginnen met het implementeren van de BFS op deze grid.
 In deze week hebben Dogukan en ik alleen de collision laag kunnen omzeten in een grid en hierop de collisie blokken kunnen tekenen. Met het BFS zijn wij helaas niet verder gekomen.
 
@@ -50,11 +50,16 @@ In deze week zijn Dogukan en ik verder gegaan met het implementeren van BFS. We 
 Na hulp van een mede-student zijn we uiteindelijk verder gekomen en hebben we een extra Tile en BreadthFirstSearch klasse toegevoegd. In de Tile klasse staat alle informatie wat betreft de tile dat het algoritme aan het odnerzoeken is, en in de BFS klasse staat alles wat te maken heeft met het pathfinding algoritme.
 Vervolgens is in de MapMain klasse verschillende routes toegevoegd die corresponderen met de podia voor de artists en de view area's van de visitors. Door de opgeslagen shows uit te lezen van de datastore, kan worden gekeken naar de naam van de artist en naar welk podium deze moet gaan op welke tijd.
 Afhankelijk van de begin tijd van een show, kan voor de visitors worden gekeken naar het podium dat is opgeslagen, en kan via de voorafingestelde route naar de juiste viewa rea gelopen worden.
+Daarnaast hebben wij als groep de globale opzet van alle klassen herzien en hierop een nieuw klassendiagram aangemaakt dat de verbinding tussen de verschillende features en klassen moet weergeven.
+![Nieuwe_opzet](SIMDiagramRevisited.jpg)
 
 ## Week 8:
 In deze week hebben wij de verschillende feature branches van het project bij elkaar gevoegd. We hebben alle packages en klassen moeten refactoren zodat deze verschillende features met elkaar samenwerken.
 Verder hebben we het voor elkaar gekregen dat er NPC's op de map gespawn kunnen worden. Deze NPC's kunnen vervolgens zelfstandig naar een aangegeven target toe lopen. 
-Zodra de NPC's bij het target zijn aangekomen, kunnen deze in het aangegeven targetArea vrij rondlopen. Tevens zullen de NPC's meeschalen wanneer de map in en uitgezoomed wordt.
+Zodra de NPC's bij het target zijn aangekomen, kunnen deze in het aangegeven targetArea vrij rondlopen. Tevens zullen de NPC's meeschalen wanneer de map in en uitgezoomed wordt. 
+Verder hebben we de agenda module aangepast. Wanneer nu op een show wordt gedrukt, dan komt er een nieuw venster met daarin alle informatie over de show en kunnen podia worden toegevoegd en verwijderd. Zo ziet de agenda er zelf wat netter uit.
+![Nieuwe_Agenda_GUI](newAgendaGUI1.png)
+![Nieuw_Podium](newAgendaGUI.png)
 
 ## Week 9:
 In deze week hebben wij alles laatste puntjes op de i gezet. De visitors kunnen na deze week naar verschillende podia toe lopen op basis van populariteit van de artist die daar optreedt. De pathfinding werkt voor de visitors en de artists. Er is een tijdsbalk toegevoegd waarmee je terug kan kijken naar een moment eerder oo de gesimuleerde dag.
