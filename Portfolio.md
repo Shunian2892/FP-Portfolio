@@ -6,7 +6,7 @@
 # Inhoud:
 1. [`Wekelijkse reflectie`](#wekelijkse-reflectie)
 2. [`Vakinhoudelijke reflectie`](#vakinhoudelijke-reflectie)
-3. [`Mijn Reflectie`](#mijn-reflectie)
+3. [`Reflectie op stelling`](#reflectie-op-stelling)
 4. [`JSON applicaties`](#json-applicaties)
 
 
@@ -257,8 +257,16 @@ We hebben er voor gekozen dat, wanneer een artist of een visitor bij een bepaald
 In deze week hebben mijn project groep en ik voornamelijk de punjtes op de i gezet. Hierbij hebben we er voor kunnen zorgen dat de visitors ,op basis van de populariteit van de artist, zich verdelen over de verschillende podia.
 Tevens is er een tijdbalk toegevoegd waarmee de gebruiker eerder gesimuleerde momenten van de dag kan terugzien. Verder hebben wij ons voobereid op het assessment voor de komende week.
 
-# Mijn reflectie
+# Reflectie op stelling:
+In het bedrijfsleven wordt steeds meer in software gesimuleerd. De werking van verschillende producten die bedrijven produceren hangen af van meerdere factoren. Wanneer een product, in dit geval een festival, bestaat uit meer gecompliceerde factoren dan wordt de faalkans voor dit product groter.
+Door het product eerst virtueel te simuleren kunnen eventuele knelpunten en risicofactoren van te voren worden weergegeven, in plaats van dat deze tijdens het testen van het product zelf naar voren komen.
+Bedrijven kunnen bijvoorbeeld verschillende transportsystemen in hun fabrieken simuleren en kijken of er aanpassingen gedaan kunnen worden aan de infrastructuur of het optimaliseren van motoren.
+Simulaties van dit soort systemen geven de gebruikers direct inzicht of de doelstelling en eisen van het uiteindelijke product haalbaar zijn. Wanneer tijdens de simulatie blijkt dat deze eisen niet haalbaar zijn, dan kan daar gemakkelijk op worden ingespeeld door bepaalde factoren in de simulatie aan te passen. Hierdoor worden de kosten voor het testen van producten aanzienlijk verlaagd.
+Niet alleen kunnen de uiteindelijke kosten lager uitkomen, ook kan het uiteindelijke product sneller worden opgeleverd of op de markt worden gebracht. Daarnaast kunnen bedrijven nu makkelijker nieuwe iedeeën op het product testen.
+In ons geval maken wij een simulatie van een festival om te zien waar eventuele knelpunten op het eigenlijke festivalterrein naar voren kunnen komen. Door deze sitautie te simuleren kunnen festivalhouders beter inschatten waar bijvoorbeeld extra ruimte moet worden gecreërd voor de bezoekers, of waar extra personeel moet staan zodat de doorstroom van bezoekers zo soepel mogelijk verloopt.
 
+[Bron: Bits&Chips](https://bits-chips.nl/artikel/multiple-v-brengt-fouten-eerder-aan-het-licht/)
+[Bron: Design Solutions](https://blog.designsolutions.nl/hoe-kan-simulatie-software-bijdragen-aan-betere-innovaties)
 
 # JSON applicaties
 JSON staat voor JavaScript Object Notation en is een gemakkelijke en lichtgewicht data-uitwisselings format.
