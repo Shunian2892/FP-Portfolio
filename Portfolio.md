@@ -6,7 +6,7 @@
 # Inhoud:
 1. [`Wekelijkse reflectie`](#wekelijkse-reflectie)
 2. [`Vakinhoudelijke reflectie`](#vakinhoudelijke-reflectie)
-3. [`Reflectie op stelling`](#reflectie-op-stelling)
+3. [`Stelling`](#stelling)
 4. [`JSON applicaties`](#json-applicaties)
 
 
@@ -263,7 +263,7 @@ We hebben er voor gekozen dat, wanneer een artist of een visitor bij een bepaald
 In deze week hebben mijn project groep en ik voornamelijk de punjtes op de i gezet. Hierbij hebben we er voor kunnen zorgen dat de visitors ,op basis van de populariteit van de artist, zich verdelen over de verschillende podia.
 Tevens is er een tijdbalk toegevoegd waarmee de gebruiker eerder gesimuleerde momenten van de dag kan terugzien. Verder hebben wij ons voobereid op het assessment voor de komende week.
 
-# Reflectie op stelling:
+# Stelling:
 In het bedrijfsleven wordt steeds meer in software gesimuleerd. De werking van verschillende producten die bedrijven produceren hangen af van meerdere factoren. Wanneer een product, in dit geval een festival, bestaat uit meer gecompliceerde factoren dan wordt de faalkans voor dit product groter.
 Door het product eerst virtueel te simuleren kunnen eventuele knelpunten en risicofactoren van te voren worden weergegeven, in plaats van dat deze tijdens het testen van het product zelf naar voren komen.
 Bedrijven kunnen bijvoorbeeld verschillende transportsystemen in hun fabrieken simuleren en kijken of er aanpassingen gedaan kunnen worden aan de infrastructuur of het optimaliseren van motoren.
