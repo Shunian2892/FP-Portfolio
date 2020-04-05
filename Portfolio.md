@@ -51,6 +51,7 @@ Na hulp van een mede-student zijn we uiteindelijk verder gekomen en hebben we ee
 Vervolgens is in de MapMain klasse verschillende routes toegevoegd die corresponderen met de podia voor de artists en de view area's van de visitors. Door de opgeslagen shows uit te lezen van de datastore, kan worden gekeken naar de naam van de artist en naar welk podium deze moet gaan op welke tijd.
 Afhankelijk van de begin tijd van een show, kan voor de visitors worden gekeken naar het podium dat is opgeslagen, en kan via de voorafingestelde route naar de juiste viewa rea gelopen worden.
 Daarnaast hebben wij als groep de globale opzet van alle klassen herzien en hierop een nieuw klassendiagram aangemaakt dat de verbinding tussen de verschillende features en klassen moet weergeven.
+
 ![Nieuwe_opzet](SIMDiagramRevisited.jpg)
 
 ## Week 8:
@@ -270,21 +271,22 @@ Simulaties van dit soort systemen geven de gebruikers direct inzicht of de doels
 Niet alleen kunnen de uiteindelijke kosten lager uitkomen, ook kan het uiteindelijke product sneller worden opgeleverd of op de markt worden gebracht. Daarnaast kunnen bedrijven nu makkelijker nieuwe iedeeën op het product testen.
 In ons geval maken wij een simulatie van een festival om te zien waar eventuele knelpunten op het eigenlijke festivalterrein naar voren kunnen komen. Door deze sitautie te simuleren kunnen festivalhouders beter inschatten waar bijvoorbeeld extra ruimte moet worden gecreërd voor de bezoekers, of waar extra personeel moet staan zodat de doorstroom van bezoekers zo soepel mogelijk verloopt.
 
+## Conclusie
+Het simuleren in software in het bedrijfsleven zal steeds meer toenemen. Door het simuleren van producten onder verschillende toestanden kunnen eventuele knelpunten sneller naar voren laten komen zodat bedrijven hierop sneller kunnen reageren.
+Dit zorgt ervoor dat de uiteindelijke kosten van het product minder worden doordat er niet elke keer weer een testproduct gemaakt hoeft te worden waarop verschillende tests uitgevoerd worden.
+
 [Bron: Bits&Chips](https://bits-chips.nl/artikel/multiple-v-brengt-fouten-eerder-aan-het-licht/)
+
 [Bron: Design Solutions](https://blog.designsolutions.nl/hoe-kan-simulatie-software-bijdragen-aan-betere-innovaties)
 
 # JSON applicaties
-JSON staat voor JavaScript Object Notation en is een gemakkelijke en lichtgewicht data-uitwisselings format.
-JSON maakt alleen gebruik van tekst, waardoor dit gemakkelijk van en naar een server verzonden kan worden.
-## Websites
-### HTML
-Json kan heel gemakkelijk worden omgezet in JavaScript wat omgezet kan worden in HTML voor websites
+JSON staat voor JavaScript Object Notation en is een gemakkelijke en lichtgewicht data-uitwisselings format. JSON wordt voornamelijk gebruikt om data tussen server en web applicatie te verzenden als alternatief voor XML.
+JSON is gebaseerd op een subset van JavaScript, maar is niet gelijk aan JavaScript.
 
-### PHP
-PHP objecten kunnen geconverteerd worden in JSON waarmee bijvoorbeeld een website gemaakt kan worden
+1. Websites
+2. Web servers
+3. Smartwatch apps
 
-## Web servers
-
-## Smartwatch apps
-
-Al deze applicaties maken gebruik van JavaScript
+Deze applicaties maken gebruik van JSON voor het verzenden en ontvangen van data tussen server en applicatie. Dit wordt gebruikt voor het verzenden en omzetten van verschillende soorten gestructreerde data.
+Tevens zorgt JSON ervoor dat er niet wordt gewacht tot API calls terug komen van de server (asynchronous calls). Terwijl het programma blijft functioneren zal een "callback" functie worden uitgevoerd wanneer een call terug komt van de server. Veel JavaScript gebaseerde applicaties, waaronder websites, gebruiken hierom JSON.
+Smart watches, net zoals elk ander type aparaat dat verbinding kan maken met het internet en een web server, gebruiken JSON om zo publieke data op te vragen.
